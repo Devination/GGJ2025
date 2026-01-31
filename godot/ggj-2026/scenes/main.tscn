@@ -1,33 +1,36 @@
-[gd_scene load_steps=6 format=3 uid="uid://bk0yujgr3nlxs"]
+[gd_scene format=3 uid="uid://bk0yujgr3nlxs"]
 
 [ext_resource type="PackedScene" uid="uid://cptdcodjcgb33" path="res://scenes/hand.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://b8v8811pbr21n" path="res://scenes/guest.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://bf01jl6xk7ctv" path="res://scenes/mask1.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://c1r8npw6y45w0" path="res://scenes/mask2.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bnwajmp2anb25" path="res://scenes/mask3.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://c5e7ljd2a57s4" path="res://scenes/user_interface.tscn" id="8_tipki"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1653180986]
 
-[node name="Hand" parent="." instance=ExtResource("1_0wfyh")]
+[node name="UserInterface" parent="." unique_id=525327691 instance=ExtResource("8_tipki")]
+
+[node name="Hand" parent="." unique_id=1397203445 instance=ExtResource("1_0wfyh")]
 unique_name_in_owner = true
 position = Vector2(552, 569)
 
-[node name="Mask" parent="Hand" instance=ExtResource("4_jyhfs")]
+[node name="Mask" parent="Hand" unique_id=408511703 instance=ExtResource("4_jyhfs")]
 position = Vector2(-60, 6)
 rotation = -0.5235988
 
-[node name="Mask2" parent="Hand" instance=ExtResource("5_tbgi4")]
+[node name="Mask2" parent="Hand" unique_id=1558659418 instance=ExtResource("5_tbgi4")]
 
-[node name="Mask3" parent="Hand" instance=ExtResource("6_tefeu")]
+[node name="Mask3" parent="Hand" unique_id=195063585 instance=ExtResource("6_tefeu")]
 position = Vector2(103, 20.000002)
 rotation = 0.2617994
 
-[node name="Guest" parent="." instance=ExtResource("2_sugp2")]
+[node name="Guest" parent="." unique_id=541798322 instance=ExtResource("2_sugp2")]
 position = Vector2(410, 267)
 
-[node name="Mask" parent="Guest" instance=ExtResource("4_jyhfs")]
+[node name="Mask" parent="Guest" unique_id=181585869 instance=ExtResource("4_jyhfs")]
 
-[node name="Guest2" parent="." instance=ExtResource("2_sugp2")]
+[node name="Guest2" parent="." unique_id=929316567 instance=ExtResource("2_sugp2")]
 position = Vector2(685, 267)
 
-[node name="Mask" parent="Guest2" instance=ExtResource("5_tbgi4")]
+[node name="Mask" parent="Guest2" unique_id=1588963937 instance=ExtResource("5_tbgi4")]

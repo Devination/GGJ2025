@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c5e7ljd2a57s4"]
+
+[ext_resource type="Script" uid="uid://blmsysorb1t0n" path="res://scenes/user_interface.gd" id="1_l2bgj"]
+[ext_resource type="Script" uid="uid://s3ulpkv0vrx" path="res://scenes/score_label.gd" id="2_y1h3b"]
+
+[node name="UserInterface" type="CanvasLayer" unique_id=525327691]
+script = ExtResource("1_l2bgj")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1127715439]
+offset_left = 940.0
+offset_top = 27.0
+offset_right = 1152.0
+offset_bottom = 132.0
+text = "PARTY COEFFICIENT:
+0.0"
+script = ExtResource("2_y1h3b")
+
+[node name="Timer" type="Label" parent="." unique_id=929660089]
+offset_left = 476.0
+offset_top = 27.0
+offset_right = 741.0
+offset_bottom = 132.0
+text = "Current Timer: 0.00"
+horizontal_alignment = 1
