@@ -11,6 +11,12 @@ func _ready() -> void:
 	mask = $Mask # get the child object named "Mask" at game start
 
 func wear_mask(new_mask:Mask):
-	print("Wearing mask: ", mask)
-	# TODO: delete mask
+	# delete old mask
+	if new_mask != mask:
+		mask.queue_free()
+	
+	# apply new mask
 	mask = new_mask
+	mask.reparent(self)
+	mask.position = Vector2.ZERO
+	mask.rotation = 0

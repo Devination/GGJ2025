@@ -12,21 +12,17 @@ func _ready() -> void:
 	hand = %Hand
 	area = $Area2D
 
-func _process(delta: float) -> void:
-	# global_position = get_global_mouse_position()
-	pass
 
-
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed == true:
 			#print(get_global_mouse_position(), shape_idx)
 			hand.dragging_mask = self
-		elif event.button_index == MOUSE_BUTTON_LEFT and event.is_released() and hand.dragging_mask == self:
+		elif (event.button_index == MOUSE_BUTTON_LEFT
+		 and event.is_released()
+		 and hand.dragging_mask == self):
 			hand.dragging_mask = null
 			apply_mask_to_guest()
-		else:
-			hand.dragging_mask = null
 
 func apply_mask_to_guest():
 	var bodies = area.get_overlapping_areas()

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://assets/images/icon.svg" id="1_my1ra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_my1ra"]
-size = Vector2(134, 124)
+size = Vector2(146, 140)
 
 [node name="Guest" type="Node2D" unique_id=2123231278]
 script = ExtResource("1_21oj1")
