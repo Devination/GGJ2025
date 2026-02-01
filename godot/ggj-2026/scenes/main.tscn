@@ -30,15 +30,19 @@ text = "Play Again?"
 
 [node name="Hand" parent="." unique_id=1397203445 instance=ExtResource("1_0wfyh")]
 unique_name_in_owner = true
+z_index = 1
 position = Vector2(552, 569)
 
 [node name="Mask" parent="Hand" unique_id=408511703 instance=ExtResource("4_jyhfs")]
+z_index = 1
 position = Vector2(-60, 6)
 rotation = -0.5235988
 
 [node name="Mask2" parent="Hand" unique_id=1558659418 instance=ExtResource("5_tbgi4")]
+z_index = 1
 
 [node name="Mask3" parent="Hand" unique_id=195063585 instance=ExtResource("6_tefeu")]
+z_index = 1
 position = Vector2(103, 20.000002)
 rotation = 0.2617994
 
@@ -46,8 +50,10 @@ rotation = 0.2617994
 position = Vector2(410, 267)
 
 [node name="Mask" parent="Guest" unique_id=181585869 instance=ExtResource("4_jyhfs")]
+z_index = 1
 
 [node name="Guest2" parent="." unique_id=929316567 instance=ExtResource("2_sugp2")]
 position = Vector2(685, 267)
 
 [node name="Mask" parent="Guest2" unique_id=1588963937 instance=ExtResource("5_tbgi4")]
+z_index = 1
