@@ -2,12 +2,33 @@
 
 [ext_resource type="Script" uid="uid://dg6p14wm5nxip" path="res://scripts/guest.gd" id="1_21oj1"]
 [ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://assets/images/icon.svg" id="1_my1ra"]
+[ext_resource type="Texture2D" uid="uid://0ooq5kqy7h23" path="res://assets/images/heart.png" id="2_jsc3r"]
+[ext_resource type="Texture2D" uid="uid://brnuf6328378e" path="res://assets/images/mask1.png" id="3_xgyym"]
+[ext_resource type="Texture2D" uid="uid://k07jw2ib4k2s" path="res://assets/images/mask2.png" id="4_534k7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_my1ra"]
 size = Vector2(146, 140)
 
 [node name="Guest" type="Node2D" unique_id=2123231278]
 script = ExtResource("1_21oj1")
+
+[node name="Heart" type="Sprite2D" parent="." unique_id=1153124664]
+z_index = 1
+position = Vector2(0, -101)
+scale = Vector2(0.22656251, 0.2265625)
+texture = ExtResource("2_jsc3r")
+
+[node name="LikeMask1" type="Sprite2D" parent="Heart" unique_id=100870321]
+visible = false
+position = Vector2(4.923077, -29.538456)
+scale = Vector2(1.0769234, 1.0769234)
+texture = ExtResource("3_xgyym")
+
+[node name="LikeMask2" type="Sprite2D" parent="Heart" unique_id=311266071]
+visible = false
+position = Vector2(4.923077, -29.538456)
+scale = Vector2(1.0769234, 1.0769234)
+texture = ExtResource("4_534k7")
 
 [node name="MaskPoint" type="Node2D" parent="." unique_id=1442051280]
 

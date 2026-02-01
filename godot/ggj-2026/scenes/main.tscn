@@ -18,25 +18,22 @@ position = Vector2(552, 569)
 
 [node name="Mask" parent="Hand" unique_id=408511703 instance=ExtResource("4_jyhfs")]
 z_index = 1
-position = Vector2(-60, 6)
-rotation = -0.5235988
+position = Vector2(-60, 0)
+attribute = Array[int]([])
 
 [node name="Mask2" parent="Hand" unique_id=1558659418 instance=ExtResource("5_tbgi4")]
 z_index = 1
-
-[node name="Mask3" parent="Hand" unique_id=195063585 instance=ExtResource("6_tefeu")]
-z_index = 1
-position = Vector2(103, 20.000002)
-rotation = 0.2617994
+position = Vector2(69, 0)
+attribute = Array[int]([])
 
 [node name="Guest" parent="." unique_id=541798322 instance=ExtResource("2_sugp2")]
 position = Vector2(410, 267)
 
-[node name="Mask" parent="Guest" unique_id=181585869 instance=ExtResource("4_jyhfs")]
-z_index = 1
+[node name="Mask" parent="Guest" unique_id=720987282 instance=ExtResource("6_tefeu")]
 
 [node name="Guest2" parent="." unique_id=929316567 instance=ExtResource("2_sugp2")]
 position = Vector2(685, 267)
 
 [node name="Mask" parent="Guest2" unique_id=1588963937 instance=ExtResource("5_tbgi4")]
 z_index = 1
+attribute = Array[int]([])

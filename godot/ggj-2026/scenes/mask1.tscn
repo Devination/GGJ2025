@@ -6,7 +6,7 @@
 
 [node name="Mask" type="Node2D" unique_id=1857447491]
 script = ExtResource("1_uapli")
-attribute = Array[int]([1])
+attribute = Array[int]([0])
 
 [node name="Art" type="Sprite2D" parent="." unique_id=147729785]
 texture = ExtResource("1_in0c2")

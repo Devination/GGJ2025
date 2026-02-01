@@ -8,11 +8,17 @@ var mask: Mask
 
 func _ready() -> void:
 	mask = $Mask # get the child object named "Mask" at game start
-	init_likes() # like a random thing if none specified
+	init_likes()
 
 func init_likes():
+	# like a random thing if none specified
 	if not len(likes):
 		likes = [randi_range(0, len(Mask.MaskTypes.keys()) - 1)]
+
+	# show that you like that thing
+	var like_displays = [$Heart/LikeMask1, $Heart/LikeMask2]
+	like_displays[likes[0]].set_visible(true)
+	
 
 func wear_mask(new_mask:Mask):
 	# delete old mask
