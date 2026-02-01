@@ -1,17 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://cptdcodjcgb33"]
+[gd_scene format=3 uid="uid://cptdcodjcgb33"]
 
 [ext_resource type="Script" uid="uid://bocdttpch8dnm" path="res://scripts/hand.gd" id="1_m1v21"]
 
-[node name="Hand" type="Node2D"]
+[node name="Hand" type="Node2D" unique_id=621812052]
 script = ExtResource("1_m1v21")
 
-[node name="MaskPoint1" type="Node2D" parent="."]
+[node name="MaskPoint1" type="Node2D" parent="." unique_id=968335679]
 position = Vector2(-87, -42)
 rotation = -0.2617994
 
-[node name="MaskPoint2" type="Node2D" parent="."]
+[node name="MaskPoint2" type="Node2D" parent="." unique_id=687167607]
 position = Vector2(0, -50)
 
-[node name="MaskPoint3" type="Node2D" parent="."]
+[node name="MaskPoint3" type="Node2D" parent="." unique_id=1089815247]
 position = Vector2(87, -42)
 rotation = 0.2617994

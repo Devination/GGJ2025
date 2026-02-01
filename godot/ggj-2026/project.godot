@@ -18,3 +18,8 @@ config/name="GGJ2026"
 run/main_scene="uid://bk0yujgr3nlxs"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://assets/images/icon.svg"
+
+[layer_names]
+
+2d_physics/layer_1="Guest Layer"
+2d_physics/layer_2="Mask Layer"

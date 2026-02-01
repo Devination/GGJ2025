@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bf01jl6xk7ctv"]
+[gd_scene format=3 uid="uid://bf01jl6xk7ctv"]
 
 [ext_resource type="Texture2D" uid="uid://brnuf6328378e" path="res://assets/images/mask1.png" id="1_in0c2"]
 [ext_resource type="Script" uid="uid://c18mmc3uvit4i" path="res://scripts/mask.gd" id="1_uapli"]
@@ -6,15 +6,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0r48r"]
 size = Vector2(134, 124)
 
-[node name="Mask" type="Node2D"]
+[node name="Mask" type="Node2D" unique_id=1857447491]
 script = ExtResource("1_uapli")
 
-[node name="Art" type="Sprite2D" parent="."]
+[node name="Art" type="Sprite2D" parent="." unique_id=147729785]
 texture = ExtResource("1_in0c2")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1016732277]
+collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=101659647]
 shape = SubResource("RectangleShape2D_0r48r")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
