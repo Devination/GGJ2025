@@ -8,6 +8,7 @@ var mask: Mask
 
 func _ready() -> void:
 	mask = $Mask # get the child object named "Mask" at game start
+	mask.is_draggable = false
 	init_likes()
 
 func init_likes():
@@ -22,7 +23,7 @@ func init_likes():
 
 func wear_mask(new_mask:Mask):
 	# delete old mask
-	if new_mask != mask:
+	if new_mask != mask and mask:
 		mask.queue_free()
 	
 	# apply new mask
@@ -30,3 +31,4 @@ func wear_mask(new_mask:Mask):
 	mask.reparent(self)
 	mask.position = Vector2.ZERO
 	mask.rotation = 0
+	mask.is_draggable = false

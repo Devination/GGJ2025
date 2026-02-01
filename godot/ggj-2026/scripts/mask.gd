@@ -5,6 +5,7 @@ extends Node2D
 enum MaskTypes {Mask1 = 0, Mask2 = 1}
 var hand: Hand
 var area: Area2D
+var is_draggable: bool = true # if the mask is worn, not draggable
 
 @export var attribute: Array[MaskTypes] = []
 
@@ -14,6 +15,8 @@ func _ready() -> void:
 
 
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	if not self.is_draggable:
+		return
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed == true:
 			#print(get_global_mouse_position(), shape_idx)
