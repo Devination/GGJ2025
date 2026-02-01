@@ -3,12 +3,16 @@ class_name Guest
 extends Node2D
 
 var mask: Mask
-enum Interests {THING_1 = 1, THING_2 = 2, THING_3 = 3}
 
-@export var likes: Array[Interests] = []
+@export var likes: Array[Mask.MaskTypes] = []
 
 func _ready() -> void:
 	mask = $Mask # get the child object named "Mask" at game start
+	init_likes() # like a random thing if none specified
+
+func init_likes():
+	if not len(likes):
+		likes = [randi_range(0, len(Mask.MaskTypes.keys()) - 1)]
 
 func wear_mask(new_mask:Mask):
 	# delete old mask

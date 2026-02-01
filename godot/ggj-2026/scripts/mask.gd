@@ -1,12 +1,12 @@
-# Masks have interests that modify guest interests and can be dragged between guests and the hand
+# Masks have MaskTypes that modify guest MaskTypes and can be dragged between guests and the hand
 class_name Mask
 extends Node2D
 
-enum Interests {THING_1 = 1, THING_2 = 2, THING_3 = 3}
+enum MaskTypes {Mask1 = 0, Mask2 = 1}
 var hand: Hand
 var area: Area2D
 
-@export var attribute: Array[Interests] = [] # TODO: use enum of interests
+@export var attribute: Array[MaskTypes] = []
 
 func _ready() -> void:
 	hand = %Hand
