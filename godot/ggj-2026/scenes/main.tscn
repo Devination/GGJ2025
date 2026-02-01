@@ -11,6 +11,23 @@
 
 [node name="UserInterface" parent="." unique_id=525327691 instance=ExtResource("8_tipki")]
 
+[node name="PanelContainer" type="PanelContainer" parent="UserInterface" unique_id=1586983111]
+visible = false
+offset_left = 455.0
+offset_top = 84.0
+offset_right = 744.0
+offset_bottom = 172.0
+
+[node name="Label" type="Label" parent="UserInterface/PanelContainer" unique_id=849363503]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "Party is over! "
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="UserInterface/PanelContainer" unique_id=1661181950]
+layout_mode = 2
+text = "Play Again?"
+
 [node name="Hand" parent="." unique_id=1397203445 instance=ExtResource("1_0wfyh")]
 unique_name_in_owner = true
 position = Vector2(552, 569)

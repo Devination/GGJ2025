@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c5e7ljd2a57s4"]
 
 [ext_resource type="Script" uid="uid://blmsysorb1t0n" path="res://scenes/user_interface.gd" id="1_l2bgj"]
-[ext_resource type="Script" uid="uid://s3ulpkv0vrx" path="res://scenes/score_label.gd" id="2_y1h3b"]
 
 [node name="UserInterface" type="CanvasLayer" unique_id=525327691]
 script = ExtResource("1_l2bgj")
@@ -13,7 +12,6 @@ offset_right = 1152.0
 offset_bottom = 132.0
 text = "PARTY COEFFICIENT:
 0.0"
-script = ExtResource("2_y1h3b")
 
 [node name="Timer" type="Label" parent="." unique_id=929660089]
 offset_left = 476.0
@@ -22,3 +20,25 @@ offset_right = 741.0
 offset_bottom = 132.0
 text = "Current Timer: 0.00"
 horizontal_alignment = 1
+
+[node name="Timer2" type="Timer" parent="." unique_id=1424114259]
+wait_time = 20.0
+autostart = true
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=952765991]
+offset_left = 455.0
+offset_top = 84.0
+offset_right = 744.0
+offset_bottom = 172.0
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=835402327]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "Party is over! "
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer" unique_id=184835000]
+layout_mode = 2
+text = "Play Again?"
+
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
