@@ -14,7 +14,7 @@ func _on_score_increased(amount):
 
 
 func _on_timer_2_timeout() -> void:
-	pass # Replace with function body.
+	print("Party is over!")
 func updateTimer():
 	$Timer.text = str($Timer2.time_left)
 func _process(delta):
