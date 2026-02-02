@@ -10,6 +10,7 @@
 [node name="Main" type="Node2D" unique_id=1653180986]
 
 [node name="UserInterface" parent="." unique_id=525327691 instance=ExtResource("8_tipki")]
+unique_name_in_owner = true
 
 [node name="Hand" parent="." unique_id=1397203445 instance=ExtResource("1_0wfyh")]
 unique_name_in_owner = true

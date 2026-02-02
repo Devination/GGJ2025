@@ -45,3 +45,4 @@ func calculate_score() -> void:
 			score -= 1
 
 	print("Score:", score)
+	%UserInterface.update_score_label(score)
