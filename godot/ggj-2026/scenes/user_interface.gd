@@ -1,16 +1,30 @@
 
 extends CanvasLayer
 
-var timer = 0
+var hand: Hand
+
+func _ready() -> void:
+	hand = get_node("/root/Main/Hand")
 
 func update_score_label(score: int):
-	$ScoreLabel.text = "Score: " + str(score)
+	$ScoreLabel.text = "Masquerade points: " + str(score)
 
 func _on_timer_2_timeout() -> void:
 	print("Party is over!")
+	$PanelContainer.visible = true
+	Engine.time_scale = 0.01
 	
 func updateTimer():
-	$Timer.text = str($Timer2.time_left)
+	$TimerLabel.text = "Party time remaining: " + str($GameTimer.time_left)
 	
 func _process(delta):
-	$Timer.text = str(ceil($Timer2.time_left))	
+	$TimerLabel.text = str(ceil($GameTimer.time_left))	
+
+
+func _on_restart_button_pressed() -> void:
+	# hide the panel
+	$PanelContainer.visible = false
+	# reset the timer
+	$GameTimer.start()
+	# reset guests and score
+	hand.restart_game()

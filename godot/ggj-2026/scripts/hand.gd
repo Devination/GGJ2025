@@ -9,12 +9,16 @@ extends Node2D
 var mask_points: Array[Node2D] = []
 var guests: Array[Guest] = []
 var dragging_mask: Mask
+var spawner: GuestSpawner
 
 func _ready() -> void:
+	spawner = $"../GuestSpawner" as GuestSpawner
 	mask_points = [$MaskPoint1, $MaskPoint2, $MaskPoint3]
+	# spawn masks in hand
 	spawn_mask(0)
 	spawn_mask(1)
 	spawn_mask(2)
+
 
 func _process(_delta: float) -> void:
 	if dragging_mask:
@@ -60,3 +64,16 @@ func calculate_score() -> void:
 
 	print("Score:", score)
 	%UserInterface.update_score_label(score)
+
+func restart_game() -> void:
+	# reset unpause game
+	Engine.time_scale = 1.0
+	
+	# remove all the guests
+	for guest in guests:
+		guest.queue_free()
+	guests.clear()
+		
+	# spawn 2 starter guests
+	spawner.spawn_guest()
+	spawner.spawn_guest()

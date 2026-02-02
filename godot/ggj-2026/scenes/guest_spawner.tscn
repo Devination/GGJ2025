@@ -13,7 +13,6 @@ curve = SubResource("Curve2D_6jnxr")
 script = ExtResource("1_6jnxr")
 
 [node name="Timer" type="Timer" parent="." unique_id=1992649628]
-wait_time = 3.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,3 +1,4 @@
+class_name GuestSpawner
 extends Path2D
 
 var guest_res: Resource = load("res://scenes/guest.tscn")

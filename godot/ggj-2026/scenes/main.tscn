@@ -26,12 +26,6 @@ unique_name_in_owner = true
 z_index = 1
 position = Vector2(552, 569)
 
-[node name="Guest" parent="." unique_id=541798322 instance=ExtResource("2_sugp2")]
-position = Vector2(410, 267)
-
-[node name="Guest2" parent="." unique_id=2123231278 instance=ExtResource("2_sugp2")]
-position = Vector2(698, 267)
-
 [node name="Walls" type="StaticBody2D" parent="." unique_id=117885560]
 disable_mode = 1
 collision_layer = 4
@@ -59,3 +53,11 @@ shape = SubResource("RectangleShape2D_tbgi4")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1631198228]
 stream = ExtResource("5_tefeu")
 autoplay = true
+
+[node name="Guest" parent="." unique_id=926047187 instance=ExtResource("2_sugp2")]
+position = Vector2(72, 73)
+move_on_ready = true
+
+[node name="Guest2" parent="." unique_id=790376774 instance=ExtResource("2_sugp2")]
+position = Vector2(1086, 589)
+move_on_ready = true

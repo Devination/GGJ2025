@@ -7,6 +7,8 @@ var hand: Hand
 var initial_force: float = 1.0
 
 @export var likes: Array[Mask.MaskTypes] = []
+# NOTE: move_on_ready should only be enabled for the manually placed starter Guessts
+@export var move_on_ready: bool = false
 
 func _ready() -> void:
 	hand = get_node("/root/Main/Hand")
@@ -14,7 +16,8 @@ func _ready() -> void:
 	mask.is_draggable = false
 	init_likes()
 	hand.register_guest(self)
-	#init_movement()
+	if move_on_ready:
+		init_movement()
 
 func init_likes():
 	# like a random thing if none specified
