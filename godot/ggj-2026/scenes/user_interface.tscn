@@ -26,6 +26,7 @@ wait_time = 20.0
 autostart = true
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=952765991]
+visible = false
 offset_left = 455.0
 offset_top = 84.0
 offset_right = 744.0

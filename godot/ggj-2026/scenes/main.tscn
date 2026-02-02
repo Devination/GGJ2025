@@ -5,6 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://bnwajmp2anb25" path="res://scenes/mask3.tscn" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://c5e7ljd2a57s4" path="res://scenes/user_interface.tscn" id="8_tipki"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jyhfs"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
+size = Vector2(208, 679)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbgi4"]
+size = Vector2(1591, 184)
+
 [node name="Main" type="Node2D" unique_id=1653180986]
 
 [node name="UserInterface" parent="." unique_id=525327691 instance=ExtResource("8_tipki")]
@@ -24,3 +34,25 @@ position = Vector2(410, 267)
 position = Vector2(698, 267)
 
 [node name="Mask" parent="Guest2" unique_id=1325900026 instance=ExtResource("6_tefeu")]
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=117885560]
+disable_mode = 1
+collision_layer = 4
+collision_mask = 4
+physics_material_override = SubResource("PhysicsMaterial_jyhfs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=2023049846]
+position = Vector2(-114, 329.5)
+shape = SubResource("RectangleShape2D_jyhfs")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=1872373870]
+position = Vector2(1267, 331)
+shape = SubResource("RectangleShape2D_jyhfs")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=647014260]
+position = Vector2(580.5, -98)
+shape = SubResource("RectangleShape2D_tbgi4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=1254307635]
+position = Vector2(580.5, 741)
+shape = SubResource("RectangleShape2D_tbgi4")

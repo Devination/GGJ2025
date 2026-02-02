@@ -23,3 +23,4 @@ config/icon="res://assets/images/icon.svg"
 
 2d_physics/layer_1="Guest Layer"
 2d_physics/layer_2="Mask Layer"
+2d_physics/layer_3="Guest Physics"
