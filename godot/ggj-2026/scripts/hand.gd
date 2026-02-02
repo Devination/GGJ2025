@@ -12,6 +12,7 @@ var dragging_mask: Mask
 var spawner: GuestSpawner
 
 func _ready() -> void:
+	move_to_bottom_of_screen()
 	spawner = $"../GuestSpawner" as GuestSpawner
 	mask_points = [$MaskPoint1, $MaskPoint2, $MaskPoint3]
 	# spawn masks in hand
@@ -19,6 +20,9 @@ func _ready() -> void:
 	spawn_mask(1)
 	spawn_mask(2)
 
+func move_to_bottom_of_screen():
+	var screen: Vector2 = get_viewport_rect().size
+	global_position = Vector2(screen.x / 2, screen.y)
 
 func _process(_delta: float) -> void:
 	if dragging_mask:

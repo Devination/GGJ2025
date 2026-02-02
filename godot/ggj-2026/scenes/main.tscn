@@ -24,7 +24,7 @@ unique_name_in_owner = true
 [node name="Hand" parent="." unique_id=1397203445 instance=ExtResource("1_0wfyh")]
 unique_name_in_owner = true
 z_index = 1
-position = Vector2(552, 569)
+position = Vector2(645, 214)
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=117885560]
 disable_mode = 1
