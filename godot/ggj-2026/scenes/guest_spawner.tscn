@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cix2tcvkfscvu"]
+
+[ext_resource type="Script" uid="uid://qka4bmnvmmcm" path="res://scripts/guest_spawner.gd" id="1_6jnxr"]
+
+[node name="GuestSpawner" type="Line2D" unique_id=1648369163]
+points = PackedVector2Array(1, 0, 1152, -1, 1152, 648, -1, 647)
+closed = true
+default_color = Color(1, 1, 1, 0)
+script = ExtResource("1_6jnxr")
+
+[node name="Timer" type="Timer" parent="." unique_id=1992649628]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

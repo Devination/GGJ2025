@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://0ooq5kqy7h23" path="res://assets/images/heart.png" id="2_jsc3r"]
 [ext_resource type="Texture2D" uid="uid://brnuf6328378e" path="res://assets/images/mask1.png" id="3_xgyym"]
 [ext_resource type="Texture2D" uid="uid://k07jw2ib4k2s" path="res://assets/images/mask2.png" id="4_534k7"]
+[ext_resource type="PackedScene" uid="uid://bnwajmp2anb25" path="res://scenes/mask3.tscn" id="6_hacci"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_534k7"]
 friction = 0.0
@@ -23,6 +24,8 @@ physics_material_override = SubResource("PhysicsMaterial_534k7")
 gravity_scale = 0.0
 can_sleep = false
 script = ExtResource("1_21oj1")
+
+[node name="Mask" parent="." unique_id=720987282 instance=ExtResource("6_hacci")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1437370324]
 shape = SubResource("CircleShape2D_534k7")

@@ -9,12 +9,12 @@ var initial_force: float = 1.0
 @export var likes: Array[Mask.MaskTypes] = []
 
 func _ready() -> void:
-	hand = %Hand # get the Hand singleton when I spawn in
+	hand = get_node("/root/Main/Hand")
 	mask = $Mask # get the child object named "Mask" when I spawn in
 	mask.is_draggable = false
 	init_likes()
 	hand.register_guest(self)
-	init_movement()
+	#init_movement()
 
 func init_likes():
 	# like a random thing if none specified
