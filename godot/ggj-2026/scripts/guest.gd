@@ -3,13 +3,17 @@ class_name Guest
 extends Node2D
 
 var mask: Mask
+var hand: Hand
 
 @export var likes: Array[Mask.MaskTypes] = []
 
 func _ready() -> void:
-	mask = $Mask # get the child object named "Mask" at game start
+	hand = %Hand # get the Hand singleton when I spawn in
+	mask = $Mask # get the child object named "Mask" when I spawn in
 	mask.is_draggable = false
 	init_likes()
+	hand.register_guest(self)
+	
 
 func init_likes():
 	# like a random thing if none specified
@@ -32,3 +36,5 @@ func wear_mask(new_mask:Mask):
 	mask.position = Vector2.ZERO
 	mask.rotation = 0
 	mask.is_draggable = false
+	
+	hand.calculate_score()
