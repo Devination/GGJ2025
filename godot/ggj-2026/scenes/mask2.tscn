@@ -6,7 +6,7 @@
 
 [node name="Mask" type="Node2D" unique_id=1854816556]
 script = ExtResource("1_db2f1")
-attribute = Array[int]([2])
+attribute = Array[int]([1])
 
 [node name="Art" type="Sprite2D" parent="." unique_id=1136548494]
 texture = ExtResource("1_7pmcf")
@@ -17,6 +17,5 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=417118915]
 shape = ExtResource("3_bkk5y")
 script = ExtResource("1_db2f1")
-attribute = Array[int]([1])
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

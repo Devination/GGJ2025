@@ -1,13 +1,20 @@
 class_name Hand
 extends Node2D
 
-@export var possible_masks: Array[Mask]  = []
+@export var spawnable_masks: Array[Resource]  = [
+	load("res://scenes/mask1.tscn"),
+	load("res://scenes/mask2.tscn"),
+	load("res://scenes/mask3.tscn")
+]
 var mask_points: Array[Node2D] = []
 var guests: Array[Guest] = []
 var dragging_mask: Mask
 
 func _ready() -> void:
 	mask_points = [$MaskPoint1, $MaskPoint2, $MaskPoint3]
+	spawn_mask(0)
+	spawn_mask(1)
+	spawn_mask(2)
 
 func _process(_delta: float) -> void:
 	if dragging_mask:
@@ -16,6 +23,13 @@ func _process(_delta: float) -> void:
 func register_guest(guest: Guest) -> void:
 	guests.append(guest)
 	calculate_score()
+
+func spawn_mask(mask_type: int) -> void:
+	var mask = spawnable_masks[mask_type].instantiate() as Mask
+	add_child(mask)
+	# set the transform
+	mask.global_position = mask_points[mask_type].global_position
+	mask.rotation = mask_points[mask_type].rotation
 
 func calculate_score() -> void:
 	var score: int = 0

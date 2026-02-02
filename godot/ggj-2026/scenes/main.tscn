@@ -2,8 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://cptdcodjcgb33" path="res://scenes/hand.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://b8v8811pbr21n" path="res://scenes/guest.tscn" id="2_sugp2"]
-[ext_resource type="PackedScene" uid="uid://bf01jl6xk7ctv" path="res://scenes/mask1.tscn" id="4_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://c1r8npw6y45w0" path="res://scenes/mask2.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bnwajmp2anb25" path="res://scenes/mask3.tscn" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://c5e7ljd2a57s4" path="res://scenes/user_interface.tscn" id="8_tipki"]
 
@@ -16,14 +14,6 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 z_index = 1
 position = Vector2(552, 569)
-
-[node name="Mask" parent="Hand" unique_id=408511703 instance=ExtResource("4_jyhfs")]
-z_index = 1
-position = Vector2(-60, 0)
-
-[node name="Mask2" parent="Hand" unique_id=1854816556 instance=ExtResource("5_tbgi4")]
-position = Vector2(83, 0)
-attribute = Array[int]([1])
 
 [node name="Guest" parent="." unique_id=541798322 instance=ExtResource("2_sugp2")]
 position = Vector2(410, 267)
