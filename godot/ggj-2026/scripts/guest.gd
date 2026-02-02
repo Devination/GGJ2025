@@ -22,7 +22,7 @@ func init_likes():
 		likes = [randi_range(0, len(Mask.MaskTypes.keys()) - 1)]
 
 	# show that you like that thing
-	var like_displays = [$Heart/LikeMask1, $Heart/LikeMask2]
+	var like_displays = [$Heart/LikeMask1, $Heart/LikeMask2, $Heart/LikeMask3]
 	like_displays[likes[0]].set_visible(true)
 
 # mingle with the other guests

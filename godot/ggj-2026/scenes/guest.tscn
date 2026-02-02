@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://brnuf6328378e" path="res://assets/images/mask1.png" id="3_xgyym"]
 [ext_resource type="Texture2D" uid="uid://k07jw2ib4k2s" path="res://assets/images/mask2.png" id="4_534k7"]
 [ext_resource type="PackedScene" uid="uid://bnwajmp2anb25" path="res://scenes/mask3.tscn" id="6_hacci"]
+[ext_resource type="Texture2D" uid="uid://c1sqvdutuseyb" path="res://assets/images/mask3.png" id="6_hfk16"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_534k7"]
 friction = 0.0
@@ -47,6 +48,12 @@ visible = false
 position = Vector2(4.923077, -29.538456)
 scale = Vector2(1.0769234, 1.0769234)
 texture = ExtResource("4_534k7")
+
+[node name="LikeMask3" type="Sprite2D" parent="Heart" unique_id=615573787]
+visible = false
+position = Vector2(4.923077, -29.538456)
+scale = Vector2(1.0769234, 1.0769234)
+texture = ExtResource("6_hfk16")
 
 [node name="MaskPoint" type="Node2D" parent="." unique_id=1442051280]
 

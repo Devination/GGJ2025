@@ -2,7 +2,7 @@
 class_name Mask
 extends Node2D
 
-enum MaskTypes {Mask1 = 0, Mask2 = 1}
+enum MaskTypes {Mask1 = 0, Mask2 = 1, Mask3 = 2}
 var hand: Hand
 var area: Area2D
 var is_draggable: bool = true # if the mask is worn, not draggable
@@ -37,10 +37,7 @@ func apply_mask_to_guest():
 		break
 	
 	# replenish this mask type in hand
-	if attribute:
-		hand.spawn_mask(attribute[0])
-	else:
-		hand.spawn_mask(2)
+	hand.spawn_mask(attribute[0])
 	
 	# delete the mask if we didn't apply it to someone
 	if not found_guest:

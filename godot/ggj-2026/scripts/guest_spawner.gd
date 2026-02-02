@@ -6,7 +6,6 @@ func spawn_guest():
 	var guest = guest_res.instantiate() as Guest
 	add_sibling(guest)
 	var curve_length = curve.get_baked_length()
-	print(curve_length)
 	var random_point = randf_range(0, curve_length)
 	guest.global_position = curve.sample_baked(random_point)
 	guest.init_movement()
