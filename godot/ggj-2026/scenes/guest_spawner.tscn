@@ -2,10 +2,14 @@
 
 [ext_resource type="Script" uid="uid://qka4bmnvmmcm" path="res://scripts/guest_spawner.gd" id="1_6jnxr"]
 
-[node name="GuestSpawner" type="Line2D" unique_id=1648369163]
-points = PackedVector2Array(1, 0, 1152, -1, 1152, 648, -1, 647)
-closed = true
-default_color = Color(1, 1, 1, 0)
+[sub_resource type="Curve2D" id="Curve2D_6jnxr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1146, -2, 0, 0, 0, 0, 1146, 646, 0, 0, 0, 0, 3, 639, 0, 0, 0, 0, -3, 6)
+}
+point_count = 5
+
+[node name="GuestSpawner" type="Path2D" unique_id=218067115]
+curve = SubResource("Curve2D_6jnxr")
 script = ExtResource("1_6jnxr")
 
 [node name="Timer" type="Timer" parent="." unique_id=1992649628]
