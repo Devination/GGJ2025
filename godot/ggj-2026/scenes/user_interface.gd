@@ -13,13 +13,9 @@ func _on_timer_2_timeout() -> void:
 	print("Party is over!")
 	$PanelContainer.visible = true
 	Engine.time_scale = 0.01
-	
-func updateTimer():
-	$TimerLabel.text = "Party time remaining: " + str($GameTimer.time_left)
-	
-func _process(delta):
-	$TimerLabel.text = str(ceil($GameTimer.time_left))	
 
+func _process(delta):
+	$TimerLabel.text = "Party time remaining: " + str(int($GameTimer.time_left))
 
 func _on_restart_button_pressed() -> void:
 	# hide the panel
